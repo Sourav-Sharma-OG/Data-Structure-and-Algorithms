@@ -77,11 +77,7 @@ int main()
     insertAtTail(head, 3);
     insertAtTail(head, 4);
     insertAtTail(head, 5);
-    insertAtTail(head, 6);
-    insertAtTail(head, 7);
-    insertAtTail(head, 8);
-    insertAtTail(head, 9);
-
+    
     display(head);
     cout<<endl;
 
