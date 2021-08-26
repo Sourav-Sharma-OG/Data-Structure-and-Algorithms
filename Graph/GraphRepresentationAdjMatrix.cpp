@@ -21,7 +21,7 @@ int main(){
 
     cout<<"Enter Edges from node u to node v: "<<endl;
     cout<<"u  v"<<endl;
-    //Takes edges as input.
+    //Takes edges as input --> from u to v.
     for(int i = 0; i<m; i++){
         int u, v;
         cin>>u>>v;

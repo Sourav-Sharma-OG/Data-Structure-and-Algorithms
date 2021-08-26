@@ -44,29 +44,29 @@ vector<string> getMazePathsWithJumps(int sr, int sc, int dr, int dc){
     vector<string>result;
 
     //Vertical moves
-    for(int jump = 1; jump <= dr - sr; jump++){
-        vector<string> vPaths = getMazePathsWithJumps(sr + jump, sc, dr, dc);
+    for(int vJump = 1;vJump <= dr - sr; vJump++){
+        vector<string> vPaths = getMazePathsWithJumps(sr + vJump, sc, dr, dc);
         for(auto i : vPaths){
-            string temp = "v" + to_string(jump) + i;
+            string temp = "v" + to_string(vJump) + i;
             result.push_back(temp);
         }
     }
 
     //Horizontal moves
-    for(int jump = 1; jump <= dc - sc; jump++){
-        vector<string> hPaths = getMazePathsWithJumps(sr, sc + jump, dr, dc);
+    for(int hJump = 1; hJump <= dc - sc; hJump++){
+        vector<string> hPaths = getMazePathsWithJumps(sr, sc + hJump, dr, dc);
         for(auto i: hPaths){
-            string temp = "h" + to_string(jump) + i;
+            string temp = "h" + to_string(hJump) + i;
             result.push_back(temp);
         }
     }
 
     //Diagonal Moves
 
-    for(int jump = 1; jump <= dc - sc && jump <= dr - sr; jump ++){
-        vector<string> dPaths = getMazePathsWithJumps(sr + jump, sc + jump, dr, dc);
+    for(int dJump = 1; dJump <= dc - sc && dJump <= dr - sr; dJump ++){
+        vector<string> dPaths = getMazePathsWithJumps(sr + dJump, sc + dJump, dr, dc);
         for(auto i: dPaths){
-            string temp = "d" + to_string(jump) + i;
+            string temp = "d" + to_string(dJump) + i;
             result.push_back(temp);
         }
     }
