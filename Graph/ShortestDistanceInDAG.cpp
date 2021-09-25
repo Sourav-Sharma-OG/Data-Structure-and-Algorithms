@@ -23,6 +23,7 @@ vector<int>getShortestPath(int v, vector<pair<int, int>>adj[], int source){
 
     vector<int>dist(v, INT_MAX);
     dist[source] = 0;
+    st.push(source);
     while(!st.empty()){
         int node = st.top();
         st.pop();

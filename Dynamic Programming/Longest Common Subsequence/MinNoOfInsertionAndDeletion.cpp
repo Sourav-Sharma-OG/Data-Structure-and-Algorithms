@@ -46,8 +46,8 @@ void minNoOfDeletionsAndInsertions(string s1, string s2){
 }
 
 int main(){
-    string s1 = "geeks";
-    string s2 = "geeksforgeeks";
+    string s1 = "geek";
+    string s2 = "gesek";
     minNoOfDeletionsAndInsertions(s1, s2);
     return 0;
 }
